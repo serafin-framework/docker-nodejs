@@ -1,8 +1,8 @@
 # nodeJS image
 
-[`serafinframework/nodejs`](https://hub.docker.com/r/serafinframework/nodejs/)
+[`serafinlabs/nodejs`](https://hub.docker.com/r/serafinlabs/nodejs/)
 
-A [nodeJS](https://alpinelinux.org/) image, based on [Serain Framework Linux Alpine image](https://hub.docker.com/r/serafinframework/alpine/), with common related tools and a project builder script.
+A [nodeJS](https://alpinelinux.org/) image, based on [Serafin-Labs Linux Alpine image](https://hub.docker.com/r/serafinlabs/alpine/), with common related tools and a project builder script.
 **dev** variants (see tags) include common development tools and features.
 
 ## development tags

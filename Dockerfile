@@ -1,4 +1,4 @@
-FROM serafinlabs/alpine:latest
+FROM serafinlabs/alpine:3.6
 LABEL maintainer="Nicolas Degardin <degardin.n@gmail.com>"
 
 RUN adduser -D -s /bin/false -u 1000 node

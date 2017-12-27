@@ -3,6 +3,7 @@ LABEL maintainer="Nicolas Degardin <degardin.n@gmail.com>"
 
 USER root
 RUN apk --update --no-cache add nodejs-doc nodejs-dev
+RUN npm install --global typescript bunyan depcheck
 RUN /opt/docker/install-devtools.sh && rm /opt/docker/install-devtools.sh
 RUN sed -ri 's#^plugins=\(([^)]+)\)$#plugins=(\1 node npm gulp bower)#g' /etc/zsh/zshrc
 ADD files/ssh_config /etc/ssh_config

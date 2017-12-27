@@ -7,7 +7,7 @@ A [nodeJS](https://alpinelinux.org/) image, based on [Serafin-Labs Linux Alpine 
 
 ## development tags
 
-**dev** tags are available and provide common *nodeJS* development packages (global installation), as well as the parent's image development tools.
+**dev** tags are available and provide a few common *nodeJS* development packages (global installation), as well as the parent's image development tools.
 
 Development Linux packages:
 - compilation tools
@@ -16,16 +16,6 @@ Development Linux packages:
 
 Development ndoeJS packages:
 - typescript
-- typings
-- grunt-cli
-- bower
-- gulp
-- forever
-- pm2
-- mocha
-- istanbul
-- newman
-- force-dedupe-git-modules
 - bunyan
 - depcheck 
 

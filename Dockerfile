@@ -12,8 +12,6 @@ USER node
 ENV PATH="/home/node/.npm/bin:$PATH"  
 
 RUN mkdir -p $HOME/.ssh && ssh-keyscan -H bitbucket.org >> ~/.ssh/known_hosts && ssh-keyscan -H github.com >> ~/.ssh/known_hosts
-RUN yarn global add grunt-cli gulp typescript gulp-typescript forever pm2 mocha newman force-dedupe-git-modules bunyan depcheck istanbul remap-istanbul \
-    browserify tsify vinyl-source-stream watchify gulp-util
 
 EXPOSE 80
 

@@ -14,5 +14,15 @@ RUN mkdir -p /home/node/cache && touch /home/node/cache/npm_completion
 ENV ZSH_CACHE_DIR /home/node/cache
 ENV PATH="/home/node/.npm/bin:$PATH"  
 
+EXPOSE 80
+EXPOSE 5858
+EXPOSE 9229
+
+ADD files/startup.sh /opt/docker/startup.sh
+ADD files/build.sh /opt/docker/build.sh
+
 VOLUME ["/home/node/.ssh"]
 VOLUME ["/srv"]
+
+ENTRYPOINT ["/opt/docker/startup.sh"]
+CMD ["npm", "start"]

@@ -15,12 +15,7 @@ RUN mkdir -p $HOME/.ssh && ssh-keyscan -H bitbucket.org >> ~/.ssh/known_hosts &&
 RUN yarn global add grunt-cli gulp typescript gulp-typescript forever pm2 mocha newman force-dedupe-git-modules bunyan depcheck istanbul remap-istanbul \
     browserify tsify vinyl-source-stream watchify gulp-util
 
-ADD files/startup.sh /opt/docker/startup.sh
-ADD files/build.sh /opt/docker/build.sh
-
 EXPOSE 80
-EXPOSE 5858
 
 WORKDIR /srv
-ENTRYPOINT ["/opt/docker/startup.sh"]
 CMD ["npm", "start"]

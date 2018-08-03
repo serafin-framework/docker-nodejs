@@ -1,4 +1,4 @@
-FROM serafinlabs/alpine:3.7
+FROM serafinlabs/alpine:3.8
 LABEL maintainer="Nicolas Degardin <degardin.n@gmail.com>"
 
 RUN adduser -D -s /bin/false -u 1000 node
@@ -9,7 +9,7 @@ RUN apk --update --no-cache add nodejs nodejs-npm git make musl musl-utils opens
 RUN setcap cap_net_bind_service=+ep /usr/bin/node
 
 USER node
-ENV PATH="/home/node/.npm/bin:$PATH"  
+ENV PATH="/home/node/.npm/bin:$PATH"
 
 RUN mkdir -p $HOME/.ssh && ssh-keyscan -H bitbucket.org >> ~/.ssh/known_hosts && ssh-keyscan -H github.com >> ~/.ssh/known_hosts
 

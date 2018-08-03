@@ -6,6 +6,7 @@ RUN mkdir -p /home/node/.npm && chown node -R /home/node/.npm && chown node /srv
 
 ENV NPM_CONFIG_PREFIX="/home/node/.npm"
 RUN apk --update --no-cache add nodejs nodejs-npm git make musl musl-utils openssh-client jq libcap yarn
+RUN npm i -g npm
 RUN setcap cap_net_bind_service=+ep /usr/bin/node
 
 USER node

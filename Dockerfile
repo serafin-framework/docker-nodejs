@@ -8,6 +8,7 @@ ENV NPM_CONFIG_PREFIX="/home/node/.npm"
 RUN apk --update --no-cache add nodejs nodejs-npm git make musl musl-utils openssh-client jq libcap yarn
 RUN npm i -g npm
 RUN setcap cap_net_bind_service=+ep /usr/bin/node
+RUN curl -Ls "https://github.com/dustinblackman/phantomized/releases/download/2.1.1a/dockerized-phantomjs.tar.gz" | tar xz -C /
 
 USER node
 ENV PATH="/home/node/.npm/bin:$PATH"

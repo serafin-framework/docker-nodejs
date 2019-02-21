@@ -1,4 +1,4 @@
-FROM serafinlabs/nodejs:8
+FROM serafinlabs/nodejs:10
 LABEL maintainer="Nicolas Degardin <degardin.n@gmail.com>"
 
 USER root
@@ -13,7 +13,7 @@ USER node
 RUN echo '' > $HOME/.zshrc
 RUN mkdir -p /home/node/cache && touch /home/node/cache/npm_completion
 ENV ZSH_CACHE_DIR /home/node/cache
-ENV PATH="/home/node/.npm/bin:$PATH"  
+ENV PATH="/home/node/.npm/bin:$PATH"
 
 EXPOSE 80
 EXPOSE 9229

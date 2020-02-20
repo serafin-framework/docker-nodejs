@@ -1,4 +1,4 @@
-FROM serafinlabs/alpine:3.9
+FROM serafinlabs/alpine:3.11
 LABEL maintainer="Nicolas Degardin <degardin.n@gmail.com>"
 
 RUN adduser -D -s /bin/false -u 1000 node
@@ -8,7 +8,6 @@ ENV NPM_CONFIG_PREFIX="/home/node/.npm"
 RUN apk --update --no-cache add python nodejs nodejs-npm git make musl musl-utils openssh-client jq libcap yarn fontconfig ghostscript-fonts
 RUN npm i -g npm
 RUN setcap cap_net_bind_service=+ep /usr/bin/node
-RUN curl -Ls "https://github.com/dustinblackman/phantomized/releases/download/2.1.1a/dockerized-phantomjs.tar.gz" | tar xz -C /
 
 USER node
 ENV PATH="/home/node/.npm/bin:$PATH"

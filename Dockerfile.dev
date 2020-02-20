@@ -1,4 +1,4 @@
-FROM serafinlabs/nodejs:10
+FROM serafinlabs/nodejs:12
 LABEL maintainer="Nicolas Degardin <degardin.n@gmail.com>"
 
 USER root
